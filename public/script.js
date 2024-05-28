@@ -21,7 +21,12 @@ const getPokemonAJAX = () => {
   // 하지만 비동기 요청을 하지 않으면 브라우저가 멈추기 때문에 권장하지 않는다.
   // open 메서드의 세 번째 인수는 생략 가능하다. 생략하면 기본값으로 false가 설정된다.
   xhr.addEventListener('load',()=>{
-    
+    if (xhr.status === 200) {
+      console.log("데이터 받은 후 조회");
+      console.dir(xhr); // xhr은 객체이다.
+
+      const result = JSON.parse(xhr.responseText);
+    }
   });
 };
 
