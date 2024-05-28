@@ -35,7 +35,7 @@ const getPokemonAJAX = () => {
 
       // DOM 조작 ----------------------------------------------------------------------------
       const root = document.getElementById('root');
-      const ul = document.createElemnet('ul');
+      const ul = document.createElement('ul');
       pokemons.forEach((pokemon)=>{
         const li = document.createElement('li');
         li.textContent = pokemon.name;
