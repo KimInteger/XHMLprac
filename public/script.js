@@ -14,3 +14,5 @@ const getPokemonAJAX = () => {
   const xhr = new XMLHttpRequest(); // 이것이 '객체', '인스턴스'로 보여야 한다.
   console.dir('데이터 받기전 조회 : ' + xhr);
 };
+
+getPokemonAJAX();
