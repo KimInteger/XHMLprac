@@ -32,6 +32,17 @@ const getPokemonAJAX = () => {
       const pokemons = result.results;
       console.dir(pokemons);
       // pokemons는 배열인 것을 결과를 통해 확인 할 수 있다.
+
+      // DOM 조작 ----------------------------------------------------------------------------
+      const root = document.getElementById('root');
+      const ul = document.createElemnet('ul');
+      pokemons.forEach((pokemon)=>{
+        const li = document.createElement('li');
+        li.textContent = pokemon.name;
+        ul.appendChild(li);
+      });
+      root.appendChild(ul);
+      // DOM 조작 ----------------------------------------------------------------------------
     }
   });
   xhr.send();
