@@ -20,7 +20,9 @@ const getPokemonAJAX = () => {
   // 따라서 응답이 올 때까지 기다렸다가 다음 코드를 실행하고 싶다면 false로 설정해야 한다.
   // 하지만 비동기 요청을 하지 않으면 브라우저가 멈추기 때문에 권장하지 않는다.
   // open 메서드의 세 번째 인수는 생략 가능하다. 생략하면 기본값으로 false가 설정된다.
-  
+  xhr.addEventListener('load',()=>{
+    
+  });
 };
 
 getPokemonAJAX();
