@@ -14,6 +14,13 @@ const getPokemonAJAX = () => {
   const xhr = new XMLHttpRequest(); // 이것이 '객체', '인스턴스'로 보여야 한다.
   // ! 객체로 조회된다. [object XMLHttpRequest]
   console.dir('데이터 받기전 조회 : ' + xhr);
+  xhr.open("GET", "https://pokeqpi.co/api/v2/pokemon/",true);
+  // 여기에 true는 비동기 요청을 의미한다.
+  // 비동기 요청을 하면 요청을 보낸 후 응답이 올 때까지 기다리지 않고 다음코드를 실행한다.
+  // 따라서 응답이 올 때까지 기다렸다가 다음 코드를 실행하고 싶다면 false로 설정해야 한다.
+  // 하지만 비동기 요청을 하지 않으면 브라우저가 멈추기 때문에 권장하지 않는다.
+  // open 메서드의 세 번째 인수는 생략 가능하다. 생략하면 기본값으로 false가 설정된다.
+  
 };
 
 getPokemonAJAX();
